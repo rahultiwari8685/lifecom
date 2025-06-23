@@ -65,143 +65,156 @@ export default function CareerPage() {
                 <div className="container">
                     <div className="row">
                         {/* ── Form column ─────────────────────────────────────── */}
-                        <div className="col-xl-8 col-lg-10">
+                        <div className="col-xl-8 col-lg-10 col-md-12">
                             <h4 className="mb-6 font-semibold">
-                                Make Your Career at India&apos;s Fastest Growing Pharmaceutical Company
+                                Make Your Career at India's Fastest Growing Pharmaceutical Company
                             </h4>
+                            <br />
+                            <br />
+                            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <section className="contact_form_box_all type_three">
 
-                            <form
-                                action="/api/career"           /* TODO: replace with your own endpoint */
-                                method="post"
-                                encType="multipart/form-data"
-                                className="wpcf7-form"
-                            >
-                                <div className="row">
-                                    {/** name + e-mail */}
-                                    <div className="col-lg-6 mb-4">
-                                        <label>
-                                            Your Name<br />
-                                            <input
-                                                type="text"
-                                                name="name"
-                                                placeholder="Enter Your Name"
-                                                className="wpcf7-form-control w-full"
-                                                required
-                                            />
-                                        </label>
-                                    </div>
-                                    <div className="col-lg-6 mb-4">
-                                        <label>
-                                            Your Email<br />
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                placeholder="Enter Your Email"
-                                                className="wpcf7-form-control w-full"
-                                                required
-                                            />
-                                        </label>
-                                    </div>
+                                    <div className="contact_form_box_inner simple_form">
+                                        <div className="contact_form_shortcode">
+                                            <div role="form" className="wpcf7">
+                                                <form
+                                                    action="/api/career"
+                                                    method="post"
+                                                    encType="multipart/form-data"
+                                                    className="wpcf7-form"
+                                                >
+                                                    <div className="row">
+                                                        {/** name + e-mail */}
+                                                        <div className="col-lg-6 mb-4">
+                                                            <label>
+                                                                Your Name<br />
+                                                                <input
+                                                                    type="text"
+                                                                    name="name"
+                                                                    placeholder="Enter Your Name"
+                                                                    className="wpcf7-form-control w-full"
+                                                                    required
+                                                                />
+                                                            </label>
+                                                        </div>
+                                                        <div className="col-lg-6 mb-4">
+                                                            <label>
+                                                                Your Email <br />
+                                                                <input
+                                                                    type="email"
+                                                                    name="email"
+                                                                    placeholder="Enter Your Email"
+                                                                    className="wpcf7-form-control w-full"
+                                                                    required
+                                                                />
+                                                            </label>
+                                                        </div>
 
-                                    {/** phone + job-title */}
-                                    <div className="col-lg-6 mb-4">
-                                        <label>
-                                            Phone Number<br />
-                                            <input
-                                                type="tel"
-                                                name="phone"
-                                                placeholder="Enter Your Number"
-                                                className="wpcf7-form-control w-full"
-                                            />
-                                        </label>
-                                    </div>
-                                    <div className="col-lg-6 mb-4">
-                                        <label>
-                                            Job Title<br />
-                                            <input
-                                                type="text"
-                                                name="jobTitle"
-                                                placeholder="Enter Job Title"
-                                                className="wpcf7-form-control w-full"
-                                            />
-                                        </label>
-                                    </div>
+                                                        {/** phone + job-title */}
+                                                        <div className="col-lg-6 mb-4">
+                                                            <label>
+                                                                Phone Number<br />
+                                                                <input
+                                                                    type="tel"
+                                                                    name="phone"
+                                                                    placeholder="Enter Your Number"
+                                                                    className="wpcf7-form-control w-full"
+                                                                />
+                                                            </label>
+                                                        </div>
+                                                        <div className="col-lg-6 mb-4">
+                                                            <label>
+                                                                Job Title <br />
+                                                                <input
+                                                                    type="text"
+                                                                    name="jobTitle"
+                                                                    placeholder="Enter Job Title"
+                                                                    className="wpcf7-form-control w-full"
+                                                                />
+                                                            </label>
+                                                        </div>
 
-                                    {/** select job-type */}
-                                    <div className="col-lg-6 mb-4">
-                                        <label>
-                                            Job Type<br />
-                                            <select
-                                                name="jobType"
-                                                className="wpcf7-form-control w-full"
-                                                defaultValue=""
-                                                required
-                                            >
-                                                <option value="" disabled>--- Job Type ---</option>
-                                                {[
-                                                    'Field Staff',
-                                                    'Office-Staff',
-                                                    'Project',
-                                                    'Accounts',
-                                                    'Computers',
-                                                    'Machinery/Plant',
-                                                    'Quality Control/Assurance',
-                                                    'Warehouse',
-                                                    'Others',
-                                                ].map(opt => (
-                                                    <option key={opt}>{opt}</option>
-                                                ))}
-                                            </select>
-                                        </label>
-                                    </div>
+                                                        {/** select job-type */}
+                                                        <div className="col-lg-6 mb-4">
+                                                            <label>
+                                                                Job Type<br />
+                                                                <select
+                                                                    name="jobType"
+                                                                    className="wpcf7-form-control w-full"
+                                                                    defaultValue=""
+                                                                    required
+                                                                >
+                                                                    <option value="" disabled>--- Job Type ---</option>
+                                                                    {[
+                                                                        'Field Staff',
+                                                                        'Office-Staff',
+                                                                        'Project',
+                                                                        'Accounts',
+                                                                        'Computers',
+                                                                        'Machinery/Plant',
+                                                                        'Quality Control/Assurance',
+                                                                        'Warehouse',
+                                                                        'Others',
+                                                                    ].map(opt => (
+                                                                        <option key={opt}>{opt}</option>
+                                                                    ))}
+                                                                </select>
+                                                            </label>
+                                                        </div>
 
-                                    {/** address */}
-                                    <div className="col-lg-6 mb-4">
-                                        <label>
-                                            Full Address<br />
-                                            <input
-                                                type="text"
-                                                name="address"
-                                                placeholder="Enter Your Address"
-                                                className="wpcf7-form-control w-full"
-                                            />
-                                        </label>
-                                    </div>
+                                                        {/** address */}
+                                                        <div className="col-lg-6 mb-4">
+                                                            <label>
+                                                                Full Address<br />
+                                                                <input
+                                                                    type="text"
+                                                                    name="address"
+                                                                    placeholder="Enter Your Address"
+                                                                    className="wpcf7-form-control w-full"
+                                                                />
+                                                            </label>
+                                                        </div>
 
-                                    {/** CV upload */}
-                                    <div className="col-lg-6 mb-4">
-                                        <label>
-                                            Upload Resume<br />
-                                            <input
-                                                type="file"
-                                                name="resume"
-                                                accept=".pdf,.doc,.docx"
-                                                className="wpcf7-form-control w-full"
-                                                required
-                                            />
-                                        </label>
-                                    </div>
+                                                        {/** CV upload */}
+                                                        <div className="col-lg-6 mb-4">
+                                                            <label>
+                                                                Upload Resume<br />
+                                                                <input
+                                                                    type="file"
+                                                                    name="resume"
+                                                                    accept=".pdf,.doc,.docx"
+                                                                    className="wpcf7-form-control w-full"
+                                                                    required
+                                                                />
+                                                            </label>
+                                                        </div>
 
-                                    {/** message */}
-                                    <div className="col-lg-12 mb-6">
-                                        <label>
-                                            Your Message (optional)<br />
-                                            <textarea
-                                                name="message"
-                                                rows={5}
-                                                placeholder="Enter Your Message"
-                                                className="wpcf7-form-control w-full"
-                                            />
-                                        </label>
-                                    </div>
+                                                        {/** message */}
+                                                        <div className="col-lg-12 col-md-12 col-lg-12 mb-6">
+                                                            <label>
+                                                                Your Message (optional)<br />
+                                                                <textarea
+                                                                    name="message"
+                                                                    rows={5}
+                                                                    placeholder="Enter Your Message"
+                                                                    className="wpcf7-form-control w-full"
+                                                                />
+                                                            </label>
+                                                        </div>
 
-                                    <div className="col-lg-12">
-                                        <button type="submit" className="theme-btn one px-6 py-2">
-                                            Submit
-                                        </button>
+                                                        <div className="col-lg-12">
+                                                            <button type="submit" value="Submit" className="wpcf7-form-control wpcf7-submit">
+                                                                Submit
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                </section>
+                            </div>
+
                         </div>
 
 
@@ -217,10 +230,10 @@ export default function CareerPage() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div >
 
                 <div className="pd_bottom_50" />
-            </section>
+            </section >
 
             <Footer />
         </>
